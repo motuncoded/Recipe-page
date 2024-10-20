@@ -25,15 +25,16 @@ body {
 }
 main {
   display: flex;
+  justify-items: center;
+  align-items: start;
   flex-direction: column;
-  padding: 2rem;
+  padding: 2rem 0;
 }
 .container {
   background-color: var(--white);
   border-radius: 12.5px;
   font-family: "Outfit", system-ui;
-  max-width: 900px;
-  width: calc(100% - 2rem);
+width: 900px;
   margin: auto;
   padding: 2rem;
   font-size: 1.1rem;
@@ -41,7 +42,6 @@ main {
 /* buttons */
 .btn-container {
   display: flex;
-  padding-left: 1.5rem;
   padding-bottom: 0.75rem;
   border-radius: 0.5rem;
 }
@@ -50,8 +50,15 @@ button {
   width: 30px;
   height: 30px;
   border: none;
-  margin: 0 0.25rem;
   border: 2px solid var(--white);
+}
+button:hover {
+  opacity: 0.8;
+  transform: scale(1.1);
+}
+button:nth-child(2),
+button:nth-child(3){
+  margin-left:  .5rem;
 }
 
 .rose {
@@ -173,14 +180,14 @@ thead {
 .table tr:last-child {
   border-bottom: none;
 }
-@media (max-width: 600px) {
+
+@media screen and (max-width: 800px) {
   .container {
-    padding: 1rem;
-    width: calc(100% - 1rem);
+    padding:1rem ;
+   max-width: 700px;
+   width: (100% -1rem);
   }
-  .btn-container {
-    padding-left: 0;
-  }
+ 
   .img-container img {
     border-radius: 1px;
   }
@@ -198,3 +205,33 @@ thead {
     margin: 0 1rem;
   }
 }
+@media screen and (max-width:375px) {
+  .container {
+    margin: 0 -2rem ;
+    padding:0 ;
+   width: 320px;
+  }
+  .btn-container{
+   margin: 0 -2rem ;
+
+  }
+ 
+  .img-container img {
+    border-radius: 1px;
+  }
+  .ingredient-container,
+  .instruction-container,
+  .recipe-container,
+  .nutrition-container {
+    padding: 1rem;
+  }
+  .preparation-container {
+    margin: 1rem;
+  }
+
+  .hr {
+    margin: 0 1rem;
+  }
+}
+
+
