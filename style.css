@@ -181,30 +181,7 @@ thead {
   border-bottom: none;
 }
 
-@media screen and (max-width: 800px) {
-  .container {
-    padding:1rem ;
-   max-width: 700px;
-   width: (100% -1rem);
-  }
- 
-  .img-container img {
-    border-radius: 1px;
-  }
-  .ingredient-container,
-  .instruction-container,
-  .recipe-container,
-  .nutrition-container {
-    padding: 1rem;
-  }
-  .preparation-container {
-    margin: 1rem;
-  }
 
-  .hr {
-    margin: 0 1rem;
-  }
-}
 @media screen and (max-width:375px) {
   .container {
     margin: 0 -2rem ;
